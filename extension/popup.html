@@ -1,0 +1,39 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LinkPilot</title>
+<style>
+  :root{--navy:#1e3a8a;--blue:#2563eb;--bg:#f8fafc;--line:#e2e8f0;--mut:#64748b}
+  *{box-sizing:border-box}body{margin:0;width:340px;font:13px/1.4 system-ui,sans-serif;background:var(--bg);color:#0f172a}
+  header{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--navy);color:#fff}
+  header b{font-size:15px}.pill{font-size:11px;padding:2px 8px;border-radius:99px;background:#334155}
+  .pill.on{background:#16a34a}.pill.paused{background:#dc2626}
+  main{padding:12px 14px;display:grid;gap:10px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 10px}.stat b{display:block;font-size:18px}.stat span{color:var(--mut);font-size:11px}
+  button{font:inherit;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:#fff;cursor:pointer}
+  button.primary{background:var(--blue);color:#fff;border-color:var(--blue)}button.warn{background:#dc2626;color:#fff;border-color:#dc2626}
+  button:disabled{opacity:.5;cursor:default}
+  #msg{color:var(--mut);font-size:12px;min-height:16px;white-space:pre-line}
+  .credit{text-align:center;color:var(--mut);font-size:11px;padding-top:2px}.credit a{color:var(--blue);text-decoration:none;font-weight:600}.credit a:hover{text-decoration:underline}.heart{color:#e11d48}
+  .banner{background:#fef2f2;border:1px solid #fecaca;color:#991b1b;padding:8px;border-radius:8px;font-size:12px}
+</style></head>
+<body>
+<header><b>LinkPilot</b><span id="pill" class="pill">stopped</span></header>
+<main>
+  <div id="banner" class="banner" hidden></div>
+  <div class="row">
+    <div class="stat"><b id="inv">0</b><span>invites today</span></div>
+    <div class="stat"><b id="msgs">0</b><span>messages today</span></div>
+    <div class="stat"><b id="drafts">0</b><span>drafts to approve</span></div>
+    <div class="stat"><b id="leads">0</b><span>leads total</span></div>
+  </div>
+  <div class="row">
+    <button id="toggle" class="primary">Start</button>
+    <button id="dash">Open dashboard</button>
+  </div>
+  <button id="capture">＋ Capture leads from this page</button>
+  <button id="diag">Selector check (this tab)</button>
+  <div id="msg"></div>
+  <div class="credit">Built with <span class="heart" aria-label="love">♥</span> by <a href="https://linkedin.com/in/meshimul" target="_blank" rel="noopener noreferrer">Tamjidul Azam</a></div>
+</main>
+<script type="module" src="popup.js"></script>
+</body></html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>LinkPilot Dashboard</title>
+<link rel="stylesheet" href="dashboard.css"></head>
+<body>
+<header>
+  <div class="brand"><span class="logo">LP</span><b>LinkPilot</b><span id="pill" class="pill">stopped</span></div>
+  <nav id="tabs">
+    <button data-tab="overview" class="active">Overview</button>
+    <button data-tab="leads">Leads</button>
+    <button data-tab="approvals">Approvals <span id="badge" class="badge" hidden>0</span></button>
+    <button data-tab="activity">Activity</button>
+    <button data-tab="settings">Settings</button>
+  </nav>
+</header>
+<div id="banner" class="banner" hidden></div>
+<main id="view"></main>
+<footer class="credit">Built with <span class="heart" aria-label="love">♥</span> by <a href="https://linkedin.com/in/meshimul" target="_blank" rel="noopener noreferrer">Tamjidul Azam</a></footer>
+<script type="module" src="dashboard.js"></script>
+</body></html>
